@@ -1,6 +1,5 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
 
 android {
@@ -28,22 +27,7 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation Libs.KOTLIN
-    implementation Libs.TIMBER
-
     implementation Libs.RX_ANDROID
-    implementation Libs.RX_ADAPTER
     implementation Libs.RX_KOTLIN
     implementation Libs.MOSHI
-    implementation Libs.MOSHI_ADAPTER
-
-    implementation Libs.RETROFIT
-    implementation Libs.RETROFIT_MOSHI_CONVERTER
-    implementation Libs.LOGGING_INTERCEPTOR
-    implementation Libs.OK_HTTP
-
-    implementation Libs.DAGGER_ANDROID
-    implementation Libs.DAGGER_LIB
-    kapt Libs.DAGGER_COMPILER
-    kapt Libs.DAGGER_SUPPORT
-
 }

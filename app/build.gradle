@@ -1,17 +1,17 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-
+apply plugin: 'kotlin-kapt'
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+    compileSdkVersion App.compileSdk
+    buildToolsVersion App.buildToolVersion
 
     defaultConfig {
         applicationId "com.mudassir.audiobookapp"
-        minSdkVersion 16
-        targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion App.minSdk
+        targetSdkVersion App.targetSdk
+        versionCode App.versionCode
+        versionName App.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -26,12 +26,35 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.3.1'
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation project(':domain')
+    implementation project(':data')
+    implementation Libs.KOTLIN
+    implementation Libs.CORE_KTX
+    implementation Libs.APP_COMPAT
+    implementation Libs.SUPPORT_CONSTRAINT_LAYOUT
+    implementation Libs.TIMBER
+
+    implementation Libs.RX_ANDROID
+    implementation Libs.RX_ADAPTER
+    implementation Libs.RX_KOTLIN
+    implementation Libs.MOSHI
+    implementation Libs.MOSHI_ADAPTER
+
+    implementation Libs.RETROFIT
+    implementation Libs.RETROFIT_MOSHI_CONVERTER
+    implementation Libs.LOGGING_INTERCEPTOR
+    implementation Libs.OK_HTTP
+
+    implementation Libs.DAGGER_ANDROID
+    implementation Libs.DAGGER_LIB
+    kapt Libs.DAGGER_COMPILER
+    kapt Libs.DAGGER_SUPPORT
+
+    implementation Libs.SHIMMER_LIB
+    implementation Libs.MATERIAL
+    implementation Libs.LIFECYCLE_EXTENSIONS
+    implementation Libs.LIFECYCLE_VIEW_MODEL_KTX
+
+    testImplementation TestLibs.JUNIT
 
 }
