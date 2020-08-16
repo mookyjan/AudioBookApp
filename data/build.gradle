@@ -25,6 +25,12 @@ android {
     }
 }
 
+def API_URL = System.getenv("API_URL") ?: apiUrl
+
+android.buildTypes.each { type ->
+    type.buildConfigField "String", "API_URL", "\"$API_URL\""
+}
+
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation Libs.KOTLIN
