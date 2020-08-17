@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/audioBookListFragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/audioBookListFragment"
+        android:name="com.mudassir.audiobookapp.ui.bookList.AudioBookListFragment"
+        android:label="audio_book_list_fragment"
+        tools:layout="@layout/audio_book_list_fragment" />
+</navigation>

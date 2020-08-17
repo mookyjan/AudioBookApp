@@ -15,6 +15,7 @@ object Versions {
     const val TIMBER = "1.5.1"
     const val APP_COMPAT = "1.1.0"
     const val RECYCLER_VIEW = "1.1.0"
+    const val SUPPORT ="1.0.0"
     const val COORDINATOR_LAYOUT = "1.1.0"
     const val DAGGER ="2.25.2"
     const val SHIMMER="0.1.0@aar"
@@ -35,7 +36,7 @@ object Versions {
     const val MOSHI = "1.9.0"
     const val MOSHI_LAZY_ADAPTER  = "2.2"
     const val  SDP = "1.0.6"
-    const val NAVIGATION = "2.3.0-alpha06"
+    const val NAVIGATION = "2.3.0"
     const val COROUTINES_ANDROID = "1.3.3"
     /* test */
     const val JUNIT = "4.12"
@@ -71,7 +72,8 @@ object Libs {
     const val LIFECYCLE_VIEW_MODEL_KTX =
         "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.LIFECYCLE_VIEW_MODEL_KTX}"
     const val NAVIGATION_FRAGMENT_KTX = "androidx.navigation:navigation-fragment-ktx:${Versions.NAVIGATION}"
-
+    const val LIFECYCLE_EXT="androidx.lifecycle:lifecycle-extensions:${Versions.LIFECYCLE_VIEW_MODEL_KTX}"
+    const val ANDROIDX_LEGACY_SUPPORT="androidx.legacy:legacy-support-v4:${Versions.SUPPORT}"
     const val DAGGER_LIB =  "com.google.dagger:dagger:${Versions.DAGGER}"
     const val DAGGER_SUPPORT =   "com.google.dagger:dagger-android-support:${Versions.DAGGER}"
     const val DAGGER_COMPILER = "com.google.dagger:dagger-compiler:${Versions.DAGGER}"

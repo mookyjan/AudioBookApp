@@ -50,10 +50,17 @@ dependencies {
     kapt Libs.DAGGER_COMPILER
     kapt Libs.DAGGER_ANDROID
 
+    implementation Libs.ANDROIDX_LEGACY_SUPPORT
+    implementation Libs.LIFECYCLE_EXT
+    implementation Libs.LIFECYCLE_VIEW_MODEL_KTX
+    implementation Libs.NAVIGATION_FRAGMENT_KTX
+    implementation Libs.NAVIGATION_UI_KTX
+
     implementation Libs.SHIMMER_LIB
     implementation Libs.MATERIAL
     implementation Libs.LIFECYCLE_EXTENSIONS
     implementation Libs.LIFECYCLE_VIEW_MODEL_KTX
+    implementation Libs.SDP
 
     testImplementation TestLibs.JUNIT
 
