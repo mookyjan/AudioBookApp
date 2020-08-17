@@ -45,10 +45,10 @@ dependencies {
     implementation Libs.LOGGING_INTERCEPTOR
     implementation Libs.OK_HTTP
 
-    implementation Libs.DAGGER_ANDROID
+    implementation Libs.DAGGER_SUPPORT
     implementation Libs.DAGGER_LIB
     kapt Libs.DAGGER_COMPILER
-    kapt Libs.DAGGER_SUPPORT
+    kapt Libs.DAGGER_ANDROID
 
     implementation Libs.SHIMMER_LIB
     implementation Libs.MATERIAL
