@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">AudioBookApp</string>
+    <string name="txt_title">List of Audio Books</string>
+    <string name="txt_book_title">Book Title</string>
+    <string name="txt_author_name">Author Name</string>
+    <string name="txt_book_description">Book Description</string>
+    <string name="txt_book_chapters">Book Chapters</string>
+    <string name="txt_narrated_by">Narrated By: %1$s</string>
+    <string name="txt_duration">Duration</string>
+    <string name="txt_language">Language : %1$s</string>
+    <string name="txt_genres">Genres</string>
+    <string name="txt_total_chapters">Chapter Count: %1$s</string>
+    <string name="txt_total_time">Total Time: %1$s</string>
 </resources>
