@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<data>
+    <variable
+        name="item"
+        type="com.mudassir.audiobookapp.model.Chapters" />
+</data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+     android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    >
+
+
+    <TextView
+        android:id="@+id/txt_title"
+        style="@style/textTitleStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical"
+        android:text="@{item.title}"
+        app:layout_constraintEnd_toStartOf="@+id/gl_end"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/gl_start"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/txt_book_title" />
+
+
+    <TextView
+        android:id="@+id/txt_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@{item.duration}"
+        app:layout_constraintEnd_toStartOf="@+id/gl_end"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/txt_title"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/txt_duration" />
+
+    <TextView
+        android:id="@+id/txt_narrated_by"
+        style="@style/subTextTitleStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text="@{@string/txt_narrated_by(item.narratedBy)}"
+        app:layout_constraintEnd_toStartOf="@+id/gl_end"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/gl_start"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title"
+        tools:text="@string/txt_title" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/dividerLineColor"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:layout_constraintStart_toStartOf="@+id/gl_start"
+        app:layout_constraintEnd_toStartOf="@+id/gl_end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:barrierAllowsGoneWidgets="true"
+        app:layout_constraintTop_toBottomOf="@+id/txt_narrated_by" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/gl_start"
+        app:layout_constraintGuide_begin="@dimen/_16sdp"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/gl_end"
+        app:layout_constraintGuide_end="@dimen/_16sdp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

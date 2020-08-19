@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.mudassir.audiobookapp.ui.bookDetails.BookDetailsViewModel" />
+
+        <variable
+            name="callback"
+            type="com.mudassir.audiobookapp.ui.bookDetails.adapter.BookChapterAdapter.Callbacks" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_color"
+    tools:context=".ui.bookDetails.BookDetailsFragment">
+
+    <ImageView
+        android:id="@+id/iv_cover"
+        loadImage="@{viewModel.listenHubAudioBooksModel.imageUrl}"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/gl_end"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/gl_start"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@mipmap/ic_launcher" />
+
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        style="@style/textTitleStyle"
+        android:textSize="@dimen/_16sdp"
+        android:textStyle="bold"
+        android:text="@{viewModel.listenHubAudioBooksModel.title}"
+        app:layout_constraintEnd_toStartOf="@+id/gl_end"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/gl_start"
+        app:layout_constraintTop_toBottomOf="@+id/iv_cover"
+        tools:text="Hello" />
+
+
+    <TextView
+        android:id="@+id/txt_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/txt_author_name"
+        app:layout_constraintEnd_toStartOf="@+id/gl_end"
+        app:layout_constraintTop_toBottomOf="@+id/iv_cover" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_generes"
+        tools:text="@string/txt_genres"
+        style="@style/subTextTitleStyle"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:text="@{viewModel.listenHubAudioBooksModel.genres}"
+        app:layout_constraintEnd_toStartOf="@+id/gl_end"
+        app:layout_constraintStart_toStartOf="@+id/gl_start"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_language"
+        android:text="@{@string/txt_language(viewModel.listenHubAudioBooksModel.language)}"
+        tools:text="@string/txt_language"
+        style="@style/subTextTitleStyle"
+        android:textColor="@color/green"
+        android:layout_marginTop="@dimen/_2sdp"
+        app:layout_constraintEnd_toStartOf="@+id/gl_end"
+        app:layout_constraintStart_toStartOf="@+id/gl_start"
+        app:layout_constraintTop_toBottomOf="@+id/txt_generes"
+        />
+
+    <TextView
+        android:id="@+id/txt_total_chapters"
+        style="@style/subTextTitleStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:textColor="@color/colorYellow"
+        android:text="@{@string/txt_total_chapters(viewModel.listenHubAudioBooksModel.chapterCount)}"
+        app:layout_constraintEnd_toStartOf="@+id/gl_end"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/gl_start"
+        app:layout_constraintTop_toBottomOf="@+id/txt_language"
+        tools:text="@string/txt_total_chapters" />
+
+    <TextView
+        android:id="@+id/txt_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:text="@{@string/txt_total_time(viewModel.listenHubAudioBooksModel.totaltime)}"
+        app:layout_constraintEnd_toStartOf="@+id/gl_end"
+        app:layout_constraintHorizontal_bias="0.923"
+        app:layout_constraintStart_toStartOf="@+id/txt_total_chapters"
+        app:layout_constraintTop_toBottomOf="@+id/txt_language"
+        tools:text="@string/txt_total_time" />
+
+    <TextView
+        android:id="@+id/txt_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:htmlText="@{viewModel.listenHubAudioBooksModel.description}"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:layout_marginTop="@dimen/_2sdp"
+        app:layout_constraintEnd_toStartOf="@+id/gl_end"
+        app:layout_constraintStart_toStartOf="@+id/gl_start"
+        app:layout_constraintTop_toBottomOf="@+id/txt_total_chapters"
+        tools:text="@string/txt_book_description" />
+
+
+
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/ep_video_view"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        app:layout_constraintEnd_toStartOf="@+id/gl_end"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/gl_start"
+        app:layout_constraintTop_toBottomOf="@+id/txt_description" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_chapters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toStartOf="@+id/gl_end"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ep_video_view"
+        tools:listitem="@layout/single_item_chapter"
+        tools:itemCount="5"
+        />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gl_start"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/_16sdp"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gl_end"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/_16sdp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

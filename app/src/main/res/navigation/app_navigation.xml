@@ -10,5 +10,18 @@
         android:id="@+id/audioBookListFragment"
         android:name="com.mudassir.audiobookapp.ui.bookList.AudioBookListFragment"
         android:label="audio_book_list_fragment"
-        tools:layout="@layout/audio_book_list_fragment" />
+        tools:layout="@layout/audio_book_list_fragment" >
+        <action
+            android:id="@+id/action_audioBookListFragment_to_bookDetailsFragment"
+            app:destination="@id/bookDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookDetailsFragment"
+        android:name="com.mudassir.audiobookapp.ui.bookDetails.BookDetailsFragment"
+        android:label="book_details_fragment"
+        tools:layout="@layout/book_details_fragment" >
+        <action
+            android:id="@+id/action_bookDetailsFragment_to_audioBookListFragment"
+            app:destination="@id/audioBookListFragment" />
+    </fragment>
 </navigation>
