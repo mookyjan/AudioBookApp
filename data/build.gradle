@@ -33,6 +33,7 @@ android.buildTypes.each { type ->
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation project(':domain')
     implementation Libs.KOTLIN
     implementation Libs.TIMBER
 

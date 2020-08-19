@@ -1,9 +1,9 @@
 package com.mudassir.domain.entity
 
 data class Authors(
-    val dob: Int,
-    val dod: Int,
+    val dob: String,
+    val dod: String,
     val first_name: String,
-    val id: Int,
+    val id: String,
     val last_name: String
 )
