@@ -6,6 +6,10 @@
         <variable
             name="viewModel"
             type="com.mudassir.audiobookapp.ui.bookList.AudioBookListViewModel" />
+
+        <variable
+            name="onBookItemClicked"
+            type="com.mudassir.audiobookapp.ui.bookList.adapter.AudioBookListAdapter.Callbacks" />
     </data>
 
 
@@ -15,24 +19,31 @@
     tools:context=".ui.bookList.AudioBookListFragment">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Hello"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/txt_title"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:text="@string/txt_title"
+        style="@style/textTitleStyle"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@id/gl_end"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/gl_start"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_audio_books"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        bookListAdapter="@{viewModel.audioBookList}"
+        bookListCallbacks="@{onBookItemClicked}"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        tools:listitem="@layout/single_item_audio_book"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/gl_end"
-        app:layout_constraintStart_toStartOf="@+id/gl_start"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title" />
 
     <androidx.constraintlayout.widget.Guideline
         android:layout_width="match_parent"
