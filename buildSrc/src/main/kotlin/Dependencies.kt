@@ -38,6 +38,7 @@ object Versions {
     const val  SDP = "1.0.6"
     const val NAVIGATION = "2.3.0"
     const val COROUTINES_ANDROID = "1.3.3"
+    const val EXO_PLAYER="2.11.7"
     /* test */
     const val JUNIT = "4.12"
 }
@@ -80,7 +81,9 @@ object Libs {
     const val DAGGER_ANDROID = "com.google.dagger:dagger-android-processor:${Versions.DAGGER}"
     const val SHIMMER_LIB =  "com.facebook.shimmer:shimmer:${Versions.SHIMMER}"
     const val NAVIGATION_UI_KTX = "androidx.navigation:navigation-ui-ktx:${Versions.NAVIGATION}"
+    const val SAFE_ARGU ="androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.NAVIGATION}"
     const val COIL = "io.coil-kt:coil:${Versions.COIL}"
+    const val EXO_PLAYER="com.google.android.exoplayer:exoplayer:${Versions.EXO_PLAYER}"
 }
 
 object TestLibs {
