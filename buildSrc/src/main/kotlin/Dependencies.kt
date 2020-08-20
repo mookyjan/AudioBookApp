@@ -41,6 +41,10 @@ object Versions {
     const val EXO_PLAYER="2.11.7"
     /* test */
     const val JUNIT = "4.12"
+    const val MOCKITO ="3.1.0"
+    const val ANDROID_X_TEST = "2.1.0"
+    const val  MOCKITOKOTLIN = "1.5.0"
+    const val TEST_RUNNER = "1.0.2"
 }
 
 object Libs {
@@ -88,4 +92,7 @@ object Libs {
 
 object TestLibs {
     const val JUNIT = "junit:junit:${Versions.JUNIT}"
+    const val TEST_RUNNER = "com.android.support.test:runner:${Versions.TEST_RUNNER}"
+    const val MOCKITO = "org.mockito:mockito-core:${Versions.MOCKITO}"
+    const val MOCKITO_HARRMAN = "com.nhaarman:mockito-kotlin-kt1.1:${Versions.MOCKITOKOTLIN}"
 }
