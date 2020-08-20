@@ -30,4 +30,8 @@ dependencies {
     implementation Libs.RX_ANDROID
     implementation Libs.RX_KOTLIN
     implementation Libs.MOSHI
+
+    testImplementation TestLibs.JUNIT
+    testImplementation TestLibs.MOCKITO
+    testImplementation TestLibs.MOCKITO_HARRMAN
 }
