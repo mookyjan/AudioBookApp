@@ -10,7 +10,13 @@ import com.mudassir.audiobookapp.R
 import com.mudassir.audiobookapp.databinding.SingleItemAudioBookBinding
 import com.mudassir.audiobookapp.model.ListenHubAudioBooksModel
 
-class AudioBookListAdapter (private val audioBookList : List<ListenHubAudioBooksModel>, private val callbacks: Callbacks? = null): RecyclerView.Adapter<AudioBookListAdapter.ViewHolder>() {
+class AudioBookListAdapter (private val callbacks: Callbacks? = null): RecyclerView.Adapter<AudioBookListAdapter.ViewHolder>() {
+
+
+    var audioBookList = listOf<ListenHubAudioBooksModel>()
+    fun setData(list: List<ListenHubAudioBooksModel>){
+        audioBookList =list
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         Timber.d { "audio book list $audioBookList" }

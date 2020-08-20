@@ -8,10 +8,10 @@ object ViewBindingAdapters {
 
     @JvmStatic
     @BindingAdapter("bookListAdapter", "bookListCallbacks", requireAll = false)
-    fun setProductAdapter(recyclerView: RecyclerView, items: List<ListenHubAudioBooksModel>?, callbacks: AudioBookListAdapter.Callbacks?) {
+    fun setBookAdapter(recyclerView: RecyclerView, items: List<ListenHubAudioBooksModel>?, callbacks: AudioBookListAdapter.Callbacks?) {
         items?.let {
             recyclerView.setHasFixedSize(true)
-            recyclerView.adapter = AudioBookListAdapter(it,callbacks)
+            recyclerView.adapter = AudioBookListAdapter(callbacks)
         }
     }
 }

@@ -6,12 +6,7 @@
         <variable
             name="viewModel"
             type="com.mudassir.audiobookapp.ui.bookList.AudioBookListViewModel" />
-
-        <variable
-            name="onBookItemClicked"
-            type="com.mudassir.audiobookapp.ui.bookList.adapter.AudioBookListAdapter.Callbacks" />
     </data>
-
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
@@ -35,8 +30,6 @@
         android:id="@+id/rv_audio_books"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        bookListAdapter="@{viewModel.audioBookList}"
-        bookListCallbacks="@{onBookItemClicked}"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:orientation="vertical"
         tools:listitem="@layout/single_item_audio_book"
