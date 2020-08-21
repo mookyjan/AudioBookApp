@@ -58,4 +58,7 @@ dependencies {
     kapt Libs.DAGGER_COMPILER
     kapt Libs.DAGGER_ANDROID
 
+    testImplementation TestLibs.JUNIT
+    testImplementation TestLibs.MOCKITO
+    testImplementation TestLibs.MOCKITO_HARRMAN
 }
