@@ -47,6 +47,7 @@ class AudioBookListFragment : Fragment(),AudioBookListAdapter.Callbacks {
         mBinding.lifecycleOwner=this
         observeEvents()
         setupForAdapter()
+        viewModel.getAudioBookList()
     }
 
     private fun observeEvents(){

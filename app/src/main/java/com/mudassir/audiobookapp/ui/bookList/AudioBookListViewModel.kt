@@ -19,10 +19,6 @@ class AudioBookListViewModel @Inject constructor(private val audioBookListUseCas
     private val _audioBookList =MutableLiveData<List<ListenHubAudioBooksModel>>()
     var audioBookList: LiveData<List<ListenHubAudioBooksModel>> = _audioBookList
 
-    /*call book list api*/
-    init {
-        getAudioBookList()
-    }
 
     /**
      * fun call audio book list api
@@ -41,4 +37,9 @@ class AudioBookListViewModel @Inject constructor(private val audioBookListUseCas
             }).addTo(compositeDisposable)
     }
 
+//    fun navigationComplete(){
+//        val navDirections = AudioBookListFragmentDirections.actionAudioBookListFragmentToBookDetailsFragment()
+//        navManager.getArgs()
+//        navManager.navigate(navDirections)
+//    }
 }
