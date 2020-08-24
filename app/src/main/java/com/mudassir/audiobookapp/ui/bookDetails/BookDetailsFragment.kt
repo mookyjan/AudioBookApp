@@ -114,24 +114,3 @@ class BookDetailsFragment : Fragment(), BookChapterAdapter.Callbacks {
         playVideo(item.link)
     }
 }
-
-
-
-//fun videoPlayerSetup(link:String){
-//        try {
-////            val link =
-////                "http://s1133.photobucket.com/albums/m590/Anniebabycupcakez/?action=view&amp; current=1376992942447_242.mp4"
-//            val videoView: VideoView = mBinding.videoView
-//            val mediaController = MediaController(activity)
-//            mediaController.setAnchorView(videoView)
-//            val video: Uri = Uri.parse(link)
-//            videoView.setMediaController(mediaController)
-//            videoView.setVideoURI(video)
-//            videoView.start()
-//        } catch (e: Exception) {
-//            // TODO: handle exception
-//
-//        }
-//    }
-
-//}

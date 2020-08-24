@@ -13,7 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.github.ajalt.timberkt.Timber
 import com.mudassir.audiobookapp.AppConstants
-import com.mudassir.audiobookapp.MainActivity
+import com.mudassir.audiobookapp.ui.MainActivity
 import com.mudassir.audiobookapp.R
 import com.mudassir.audiobookapp.databinding.AudioBookListFragmentBinding
 import com.mudassir.audiobookapp.model.ListenHubAudioBooksModel
