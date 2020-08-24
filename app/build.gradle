@@ -82,5 +82,8 @@ dependencies {
     implementation Libs.EXO_PLAYER
 
     testImplementation TestLibs.JUNIT
+    testImplementation TestLibs.MOCKITO
+    testImplementation TestLibs.MOCKITO_HARRMAN
+    testImplementation TestLibs.CORE_TEST
 
 }

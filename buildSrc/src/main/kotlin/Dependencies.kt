@@ -45,6 +45,8 @@ object Versions {
     const val ANDROID_X_TEST = "2.1.0"
     const val  MOCKITOKOTLIN = "1.5.0"
     const val TEST_RUNNER = "1.0.2"
+    const val CORE_TEST ="1.1.1"
+    const val ESPRESSO_TEST ="3.3.0-alpha03"
 }
 
 object Libs {
@@ -92,7 +94,12 @@ object Libs {
 
 object TestLibs {
     const val JUNIT = "junit:junit:${Versions.JUNIT}"
+    const val CORE_TEST ="android.arch.core:core-testing:${Versions.CORE_TEST}"
     const val TEST_RUNNER = "com.android.support.test:runner:${Versions.TEST_RUNNER}"
     const val MOCKITO = "org.mockito:mockito-core:${Versions.MOCKITO}"
     const val MOCKITO_HARRMAN = "com.nhaarman:mockito-kotlin-kt1.1:${Versions.MOCKITOKOTLIN}"
+
+    const val TEST_RULES =  "androidx.test:rules:${Versions.TEST_RUNNER}"
+    const val ESPRESSO_SUPPORT="com.android.support.test.espresso:espresso-core:${Versions.ESPRESSO_TEST}"
+    const val ESPRESSO ="androidx.test.espresso:espresso-contrib:${Versions.ESPRESSO_TEST}"
 }
