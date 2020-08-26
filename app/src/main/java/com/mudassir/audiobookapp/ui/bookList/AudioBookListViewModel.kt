@@ -37,9 +37,9 @@ class AudioBookListViewModel @Inject constructor(private val audioBookListUseCas
             }).addTo(compositeDisposable)
     }
 
-//    fun navigationComplete(){
-//        val navDirections = AudioBookListFragmentDirections.actionAudioBookListFragmentToBookDetailsFragment()
-//        navManager.getArgs()
-//        navManager.navigate(navDirections)
-//    }
+    /**
+     * refresh the list
+     */
+    fun refresh() = getAudioBookList()
+
 }

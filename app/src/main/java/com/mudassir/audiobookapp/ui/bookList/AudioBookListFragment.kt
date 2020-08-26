@@ -53,9 +53,6 @@ class AudioBookListFragment : Fragment(),AudioBookListAdapter.Callbacks {
 
     private fun observeEvents(){
 
-        viewModel.loading.observe(viewLifecycleOwner, Observer {
-            (activity as MainActivity).showProgress(it)
-        })
         viewModel.error.observe(viewLifecycleOwner, Observer {
             Timber.e { "Error $it" }
             Toast.makeText(activity,"Error $it",Toast.LENGTH_SHORT).show()
@@ -72,6 +69,7 @@ class AudioBookListFragment : Fragment(),AudioBookListAdapter.Callbacks {
     private fun setupForAdapter(){
          mAdapter.setupListener(this)
         mBinding.rvAudioBooks.adapter=mAdapter
+        mBinding.lySwipeRefresh.setProgressViewOffset(false,mBinding.root.height/2,500)
     }
 
     /***
