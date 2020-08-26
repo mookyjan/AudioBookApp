@@ -30,7 +30,8 @@ class AudioBookListFragment : Fragment(),AudioBookListAdapter.Callbacks {
     lateinit var viewModelFactory : ViewModelProvider.Factory
     private lateinit var viewModel: AudioBookListViewModel
     private lateinit var mBinding: AudioBookListFragmentBinding
-    private lateinit var mAdapter : AudioBookListAdapter
+    @Inject
+     lateinit var mAdapter : AudioBookListAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -69,7 +70,7 @@ class AudioBookListFragment : Fragment(),AudioBookListAdapter.Callbacks {
     }
 
     private fun setupForAdapter(){
-        mAdapter = AudioBookListAdapter(this)
+         mAdapter.setupListener(this)
         mBinding.rvAudioBooks.adapter=mAdapter
     }
 
