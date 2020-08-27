@@ -79,11 +79,20 @@ dependencies {
     implementation Libs.SDP
     implementation Libs.COIL
 
+    //database lib
+    implementation Libs.ROOM_DB
+
     implementation Libs.EXO_PLAYER
 
     testImplementation TestLibs.JUNIT
     testImplementation TestLibs.MOCKITO
     testImplementation TestLibs.MOCKITO_HARRMAN
     testImplementation TestLibs.CORE_TEST
+
+    androidTestImplementation TestLibs.TEST_RULES
+    androidTestImplementation TestLibs.TEST_RUNNER
+    androidTestImplementation TestLibs.ESPRESSO
+    androidTestImplementation TestLibs.ESPRESSO_SUPPORT
+    androidTestImplementation TestLibs.CORE_TEST
 
 }

@@ -39,12 +39,14 @@ object Versions {
     const val NAVIGATION = "2.3.0"
     const val COROUTINES_ANDROID = "1.3.3"
     const val EXO_PLAYER="2.11.7"
+    const val ROOM_VERSION="1.1.1"
+    const val GSON ="2.8.6"
     /* test */
     const val JUNIT = "4.12"
     const val MOCKITO ="3.1.0"
     const val ANDROID_X_TEST = "2.1.0"
     const val  MOCKITOKOTLIN = "1.5.0"
-    const val TEST_RUNNER = "1.0.2"
+    const val TEST_RUNNER = "1.2.0"
     const val CORE_TEST ="1.1.1"
     const val ESPRESSO_TEST ="3.3.0-alpha03"
 }
@@ -90,6 +92,10 @@ object Libs {
     const val SAFE_ARGU ="androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.NAVIGATION}"
     const val COIL = "io.coil-kt:coil:${Versions.COIL}"
     const val EXO_PLAYER="com.google.android.exoplayer:exoplayer:${Versions.EXO_PLAYER}"
+    const val ROOM_DB= "android.arch.persistence.room:runtime:${Versions.ROOM_VERSION}"
+    const val ROOM_RXJAVA ="android.arch.persistence.room:rxjava2:${Versions.ROOM_VERSION}"
+    const val ROOM_COMPILER ="android.arch.persistence.room:compiler:${Versions.ROOM_VERSION}"
+    const val GSON ="com.google.code.gson:gson:${Versions.GSON}"
 }
 
 object TestLibs {

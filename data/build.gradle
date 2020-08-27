@@ -45,6 +45,7 @@ dependencies {
     implementation project(':domain')
     implementation Libs.KOTLIN
     implementation Libs.TIMBER
+    implementation Libs.GSON
 
     implementation Libs.RX_ANDROID
     implementation Libs.RX_ADAPTER
@@ -61,6 +62,10 @@ dependencies {
     implementation Libs.DAGGER_LIB
     kapt Libs.DAGGER_COMPILER
     kapt Libs.DAGGER_ANDROID
+
+    implementation Libs.ROOM_DB
+    implementation Libs.ROOM_RXJAVA
+    kapt Libs.ROOM_COMPILER
 
     testImplementation TestLibs.JUNIT
     testImplementation TestLibs.MOCKITO
