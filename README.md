@@ -37,7 +37,7 @@ like
 * ErrorHandling, 
 * Internet connectivity and 
 * Design of the app is also kept sample and can be improved much more
-* Swipe to Refresh can be used to refresh data by force
+* Swipe to Refresh can be used to refresh data by force (DONE IN room_db branch)
 
 
 comments are written with every function that what it will do.
@@ -47,7 +47,7 @@ also TODO are given in the area which we can improve more.
 
 ##TODO
 * improving the design
-* Setup for Room Database
+* Setup for Room Database (DONE IN room_db branch)
 * add more unit test cases
 * improve the audio player to play the book in background
 * Shimmer effect setup
