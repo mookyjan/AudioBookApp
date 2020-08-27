@@ -10,8 +10,8 @@ class GetAudioBookListUseCase(schedulers: SchedulerProvider,
                               private val getAudioBookGateWay: AudioBookGateWay)
     : UseCase<Boolean,AudioBookEntity>(schedulers){
 
-    override fun buildUseCaseObservable(params: Boolean): Single<AudioBookEntity> {
+    override fun buildUseCaseObservable(refresh: Boolean): Single<AudioBookEntity> {
 
-        return getAudioBookGateWay.getAudioBookList(params)
+        return getAudioBookGateWay.getAudioBookList(refresh)
     }
 }

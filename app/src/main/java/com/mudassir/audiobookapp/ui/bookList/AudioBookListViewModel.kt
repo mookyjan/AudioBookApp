@@ -23,9 +23,9 @@ class AudioBookListViewModel @Inject constructor(private val audioBookListUseCas
     /**
      * fun call audio book list api
      */
-    fun getAudioBookList(){
+    fun getAudioBookList(isRefresh: Boolean =false){
         _loading.postValue(true)
-        audioBookListUseCase.execute(true)
+        audioBookListUseCase.execute(isRefresh)
             .subscribeBy(onSuccess = {
                 _loading.postValue(false)
                 _audioBookList.postValue(it.listenHubAudioBooks.mapToPresentation())
@@ -40,6 +40,6 @@ class AudioBookListViewModel @Inject constructor(private val audioBookListUseCas
     /**
      * refresh the list
      */
-    fun refresh() = getAudioBookList()
+    fun refresh() = getAudioBookList(true)
 
 }
