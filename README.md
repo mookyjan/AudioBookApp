@@ -46,7 +46,7 @@ also TODO are given in the area which we can improve more.
 
 
 ##TODO
-* improving the design
+* improving the UI design
 * Setup for Room Database
 * add more unit test cases
 * improve the audio player to play the book in background
